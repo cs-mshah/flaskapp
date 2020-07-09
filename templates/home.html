@@ -4,6 +4,35 @@
     </head>
     <body>
         <h1>Headlines</h1>
+
+        <h2>Currency</h2>
+
+        <form>
+            from:   <select name="currency_from">
+                        {% for currency in currencies %}
+                            <option value="{{currency}}" {{'selected="selected"' if currency_from==currency}}>{{currency}}</option>
+                        {% endfor %}
+                    </select>
+            to:     <select name="currency_to">
+                        {% for currency in currencies %}
+                            <option value="{{currency}}" {{'selected="selected"' if currency_to==currency}}>{{currency}}</option>
+                        {% endfor %}
+                    </select>
+            <input type="submit" value="Submit">
+        </form>
+
+        1 {{currency_from}} = {{currency_to}} {{rate}}
+
+        <h2>Current weather</h2>
+        <form>
+            <input type="text" name="city" placeholder="City,Country">
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>City: <b>{{weather.city}}</b></p>
+        <p>{{weather.description}} |{{weather.temperature}}&#8451;</p>
+
+        <h2>Headlines</h2>
         <form>
             <input type="text" name="publication" placeholder="search publication" />
             <input type="submit" value="Submit" />
