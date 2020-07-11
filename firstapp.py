@@ -13,8 +13,12 @@ app = Flask(__name__)
 #-------GLOBAL VARIABLES--------------------
 RSS_FEEDS={
     'toi': "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
-    'bbc': "http://feeds.bbci.co.uk/news/rss.xml",
-    'fox': "http://feeds.foxnews.com/foxnews/latest"
+    'bbc': "http://feeds.bbci.co.uk/news/world/rss.xml",
+    'fox': "http://feeds.foxnews.com/foxnews/latest",
+    'cnn': "http://rss.cnn.com/rss/edition_world.rss",
+    'nytimes': "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml",
+    'guardian': "https://www.theguardian.com/world/rss",
+    'ndtv': "http://feeds.feedburner.com/ndtvnews-world-news"
 }
 
 DEFAULTS = {'publication':'toi','city':'Pune,India','currency_from':'USD','currency_to':'INR'}
